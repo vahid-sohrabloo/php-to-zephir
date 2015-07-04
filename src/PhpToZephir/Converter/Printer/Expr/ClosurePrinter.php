@@ -53,7 +53,7 @@ class ClosurePrinter
             self::$converted[$methodName] = 1;
         }
 
-        $name = $methodName."Closure".$this->N2L(count(self::$converted[$methodName]));
+        $name = $methodName."Closure".$this->N2L(count(self::$converted[$methodName])-1);
 
         $this->logger->logNode(
             sprintf('Closure does not exist in Zephir, class "%s" with __invoke is created', $name),
